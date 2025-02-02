@@ -1,6 +1,6 @@
 import { Player } from '@remotion/player';
-import { MainComp } from './MainComp';
-import { videoProps } from './constants';
+import { MainComp } from '../remotion/MainComp';
+import { videoProps } from '../shared/constants';
 
 
 export const App = () => {
@@ -32,6 +32,7 @@ export const App = () => {
         <Player
           autoPlay
           loop
+          controls
           durationInFrames={videoProps.durationInFrames}
           component={MainComp}
           compositionWidth={compositionWidth}

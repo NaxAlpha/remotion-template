@@ -1,6 +1,6 @@
 export const videoProps = {
+    fps: 30,
     videoWidth: 1280,
     videoHeight: 720,
-    fps: 30,
-    durationInFrames: 120,
+    durationInFrames: 90,
 }
