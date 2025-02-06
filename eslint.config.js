@@ -1,8 +1,12 @@
+// require('./esmoney.js');
+// console.log('Monkey patching Node.js module resolution...');
+
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
+// import { config } from "@remotion/eslint-config-flat";
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -25,4 +29,5 @@ export default tseslint.config(
       ],
     },
   },
+  // config,
 )
