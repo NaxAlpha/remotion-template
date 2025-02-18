@@ -30,11 +30,11 @@ const renderSpecificFrames = async (compositionId: string, serveUrl: string, out
     const totalFrames = composition.durationInFrames;
     const framesToRender = calculateFramesToRender(totalFrames, n);
 
-    for (const frame of framesToRender) {
+    for (const [i, frame] of framesToRender.entries()) {
         await renderStill({
             composition,
             serveUrl,
-            output: path.join(outputDir, `frame-${frame.toString().padStart(4, '0')}.png`),
+            output: path.join(outputDir, `frame-${i}.png`),
             frame,
             imageFormat: 'png',
         });
